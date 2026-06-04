@@ -21,6 +21,12 @@
     </div>
 
     <br>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password">
+    </div>
+
+    <br>
     <button type="submit">Send</button>
 
   </form>

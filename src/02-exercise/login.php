@@ -1,5 +1,4 @@
-<?php 
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 session_start();
 
@@ -13,7 +12,11 @@ session_start();
   <title>Welcome</title>
 </head>
 <body>
-  <h1>Welcome, <?= $_SESSION['username'] ?></h1>
-  <p>Your email is: <?= $_SESSION['email'] ?></p>
+  <?php if (!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])) : ?>
+    <h1>Welcome, <?= $_SESSION['username'] ?></h1>
+    <p>Your email is: <?= $_SESSION['email'] ?></p>
+  <?php else : ?>
+    <h1>Please log in</h1>
+  <?php endif; ?>
 </body>
 </html>
